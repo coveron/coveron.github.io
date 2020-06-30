@@ -425,6 +425,7 @@ To define and validate the JSON object of the CID-File, the following JSON schem
                                     "description":"If branch result description",
                                     "required":[
                                         "evaluation_marker_id",
+                                        "condition_possibilities",
                                         "conditions",
                                         "result_evaluation_code_section",
                                         "result_body_code_section"
@@ -433,6 +434,43 @@ To define and validate the JSON object of the CID-File, the following JSON schem
                                         "evaluation_marker_id":{
                                             "type":"integer",
                                             "description":"ID of the evaluation marker for the decision"
+                                        },
+                                        "condition_possibilities": {
+                                            "type":"array",
+                                            "description":"Stores possible condition combinations for true and false decision results",
+                                            "minItems": 2,
+                                            "items": {
+                                                "type": "object",
+                                                "description": "Stores a combination of condition results and the decision result",
+                                                "required": {
+                                                    "decision_result": {
+                                                        "type":"string",
+                                                        "description":"Decision result. Can either be 'true' or 'false'"
+                                                    },
+                                                    "condition_combination": {
+                                                        "type": "array",
+                                                        "descirption":"Stores a list of all conditions and their respective results",
+                                                        "items": {
+                                                            "type":"object",
+                                                            "description":"Condition result. Stores marker id and result",
+                                                            "required": [
+                                                                "evaluation_marker_id",
+                                                                "condition_result"
+                                                            ],
+                                                            "properties": {
+                                                                "evaluation_marker_id": {
+                                                                    "type": "number",
+                                                                    "description": "Stores the evaluation marker id of the condition"
+                                                                },
+                                                                "condition_result": {
+                                                                    "type": "string",
+                                                                    "description": "Stores the result. Can either be 'true', 'false' or 'x'"
+                                                                }
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
                                         },
                                         "conditions":{
                                             "type":"array",
@@ -452,7 +490,7 @@ To define and validate the JSON object of the CID-File, the following JSON schem
                                                     },
                                                     "code_section":{
                                                         "type":"object",
-                                                        "description":"Code section of the function body",
+                                                        "description":"Code section of the condition",
                                                         "required":[
                                                             "start_line",
                                                             "start_column",
@@ -576,9 +614,9 @@ To define and validate the JSON object of the CID-File, the following JSON schem
                                 "type":"integer",
                                 "description":"ID of the parent function"
                             },
-                            "expression_code_section":{
+                            "switch_branch_code_section":{
                                 "type":"object",
-                                "description":"Code section of the switch expression",
+                                "description":"Code section of the switch branch",
                                 "required":[
                                     "start_line",
                                     "start_column",
@@ -636,7 +674,7 @@ To define and validate the JSON object of the CID-File, the following JSON schem
                                         },
                                         "evaluation_code_section":{
                                             "type":"object",
-                                            "description":"Code section of the switch expression",
+                                            "description":"Code section of the comparison value",
                                             "required":[
                                                 "start_line",
                                                 "start_column",
@@ -716,6 +754,7 @@ To define and validate the JSON object of the CID-File, the following JSON schem
                             "function_id",
                             "evaluation_marker_id",
                             "evaluation_code_section",
+                            "condition_possibilities",
                             "conditions",
                             "true_code_section",
                             "false_code_section"
@@ -732,6 +771,43 @@ To define and validate the JSON object of the CID-File, the following JSON schem
                             "evaluation_marker_id":{
                                 "type":"integer",
                                 "description":"ID of the according evaluation marker"
+                            },
+                            "condition_possibilities": {
+                                "type":"array",
+                                "description":"Stores possible condition combinations for true and false decision results",
+                                "minItems": 2,
+                                "items": {
+                                    "type": "object",
+                                    "description": "Stores a combination of condition results and the decision result",
+                                    "required": {
+                                        "decision_result": {
+                                            "type":"string",
+                                            "description":"Decision result. Can either be 'true' or 'false'"
+                                        },
+                                        "condition_combination": {
+                                            "type": "array",
+                                            "descirption":"Stores a list of all conditions and their respective results",
+                                            "items": {
+                                                "type":"object",
+                                                "description":"Condition result. Stores marker id and result",
+                                                "required": [
+                                                    "evaluation_marker_id",
+                                                    "condition_result"
+                                                ],
+                                                "properties": {
+                                                    "evaluation_marker_id": {
+                                                        "type": "number",
+                                                        "description": "Stores the evaluation marker id of the condition"
+                                                    },
+                                                    "condition_result": {
+                                                        "type": "string",
+                                                        "description": "Stores the result. Can either be 'true', 'false' or 'x'"
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
                             },
                             "conditions":{
                                 "type":"array",
@@ -844,6 +920,7 @@ To define and validate the JSON object of the CID-File, the following JSON schem
                             "evaluation_marker_id",
                             "evaluation_code_section",
                             "body_code_section",
+                            "condition_possibilities",
                             "conditions"
                         ],
                         "properties":{
@@ -929,6 +1006,43 @@ To define and validate the JSON object of the CID-File, the following JSON schem
                                         "type":"integer",
                                         "description":"Column number (starting from 1) for the end of the code section",
                                         "minimum":1
+                                    }
+                                }
+                            },
+                            "condition_possibilities": {
+                                "type":"array",
+                                "description":"Stores possible condition combinations for true and false decision results",
+                                "minItems": 2,
+                                "items": {
+                                    "type": "object",
+                                    "description": "Stores a combination of condition results and the decision result",
+                                    "required": {
+                                        "decision_result": {
+                                            "type":"string",
+                                            "description":"Decision result. Can either be 'true' or 'false'"
+                                        },
+                                        "condition_combination": {
+                                            "type": "array",
+                                            "descirption":"Stores a list of all conditions and their respective results",
+                                            "items": {
+                                                "type":"object",
+                                                "description":"Condition result. Stores marker id and result",
+                                                "required": [
+                                                    "evaluation_marker_id",
+                                                    "condition_result"
+                                                ],
+                                                "properties": {
+                                                    "evaluation_marker_id": {
+                                                        "type": "number",
+                                                        "description": "Stores the evaluation marker id of the condition"
+                                                    },
+                                                    "condition_result": {
+                                                        "type": "string",
+                                                        "description": "Stores the result. Can either be 'true', 'false' or 'x'"
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }
                                 }
                             },
@@ -1048,6 +1162,11 @@ Detailed info on the elements inside the JSON object:
       - **function_id**: ID of the parent function
       - **branch_results**: Array with list of all possible branch results
         - **evaluation_marker_id**: Unique ID for the evaluation marker
+        - **condition_possibilities**: List with condition combinations and fitting decision results for this evaluation string(necessary for MC/DC)
+          - **decision_result**: String with result of the decision, can be "true" or false"
+          - **condition_combination**: List with results for every condition in a decision
+            - **evaluation_marker_id**: ID of the evaluation marker for the condition
+            - **result**: str, can be "true", "false", or "X"
         - **conditions**: Array of conditions inside the decision
           - **evaluation_marker_id**: ID of the according evaluation marker
           - **code_section**: Code section for the condition
@@ -1068,7 +1187,7 @@ Detailed info on the elements inside the JSON object:
     - **switch_branches**: Array with all switch branches inside of the parsed code
       - **switch_branch_id**: Unique ID for the switch branch
       - **function_id**: ID of the parent function
-      - **expression_code_section**: Code section of the evaluated switch expression
+      - **switch_branch_code_section**: Code section of the evaluated switch expression
         - **start_line**: Line number (starting from 1) for the start of the code section
         - **start_column**: Column number (starting from 1) for the start of the code section
         - **end_line**: Line number (starting from 1) for the end of the code section
@@ -1095,6 +1214,11 @@ Detailed info on the elements inside the JSON object:
         - **start_column**: Column number (starting from 1) for the start of the code section
         - **end_line**: Line number (starting from 1) for the end of the code section
         - **end_column**: Column number (starting from 1) for the end of the code section
+      - **condition_possibilities**: List with condition combinations and fitting decision results for this evaluation string (necessary for MC/DC)
+        - **decision_result**: String with result of the decision, can be "true" or false"
+        - **condition_combination**: List with results for every condition in a decision
+          - **evaluation_marker_id**: ID of the evaluation marker for the condition
+          - **result**: str, can be "true", "false", or "X"
       - **conditions**: Array of conditions inside the decision
         - **evaluation_marker_id**: ID of the according evaluation marker
         - **code_section**: Code section for the condition
@@ -1127,6 +1251,11 @@ Detailed info on the elements inside the JSON object:
         - **start_column**: Column number (starting from 1) for the start of the code section
         - **end_line**: Line number (starting from 1) for the end of the code section
         - **end_column**: Column number (starting from 1) for the end of the code section
+      - **condition_possibilities**: List with condition combinations and fitting decision results for this evaluation string(necessary for MC/DC)
+        - **decision_result**: String with result of the decision, can be "true" or false"
+        - **condition_combination**: List with results for every condition in a decision
+          - **evaluation_marker_id**: ID of the evaluation marker for the condition
+          - **result**: str, can be "true", "false", or "X"
       - **conditions**: Array of conditions inside the decision
         - **evaluation_marker_id**: ID of the according evaluation marker
         - **code_section**: Code section for the condition
