@@ -1,5 +1,5 @@
 ---
-title: Codeconut Instrumentation Data (CID) - Specification
+title: Coveron Instrumentation Data (CID) - Specification
 permalink: /docs/cid_format/
 ---
 
@@ -8,11 +8,11 @@ permalink: /docs/cid_format/
 
 ## Introduction
 
-The Codeconut Instrumentation Data Format provides the information necessary to link the runtime output to the according source code file.
+The Coveron Instrumentation Data Format provides the information necessary to link the runtime output to the according source code file.
 
 The file consists of a header and a gzip-compressed JSON object, whose structure and content details are explained in a later section.
 
-The link between source code and runtime metrics is established by providing a dictionary that links every unique marker's ID integrated into the final source code with 1 or more elements (statements, decisions and conditions) in the uninstrumented source code and specifies the type of the marker (more info found in the documentation for the [Codeconut Runtime Information specification]({{site.baseurl}}{% link _docs/cri_format.md %})).
+The link between source code and runtime metrics is established by providing a dictionary that links every unique marker's ID integrated into the final source code with 1 or more elements (statements, decisions and conditions) in the uninstrumented source code and specifies the type of the marker (more info found in the documentation for the [Coveron Runtime Information specification]({{site.baseurl}}{% link _docs/cri_format.md %})).
 
 The file is encoded in UTF-8.
 
@@ -21,7 +21,7 @@ The file is encoded in UTF-8.
 The header contains the following information:
 
 - Magic number for CID files (0x49 0x4D 0x41 0x43 0x49 0x44 0x46 0x21)
-  - The magic number can be interpreted in UTF-8 to get: IMACIDF! (*I'm a Codeconut Instrumentation Data File!*)
+  - The magic number can be interpreted in UTF-8 to get: IMACIDF! (*I'm a Coveron Instrumentation Data File!*)
 - Version of the CID-File (2 bytes wide)
 - Line break (0x0A)
 
@@ -52,7 +52,7 @@ To define and validate the JSON object of the CID-File, the following JSON schem
 ```json
 {
     "$schema":"http://json-schema.org/draft/2019-09/schema",
-    "title":"Codeconut Instrumentation Data",
+    "title":"Coveron Instrumentation Data",
     "required":[
         "source_code_filename",
         "source_code_hash",

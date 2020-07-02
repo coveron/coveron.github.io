@@ -1,5 +1,5 @@
 ---
-title: Codeconut Runtime Information (CRI) - Specification
+title: Coveron Runtime Information (CRI) - Specification
 permalink: /docs/cri_format/
 ---
 
@@ -8,11 +8,11 @@ permalink: /docs/cri_format/
 
 ## Introduction
 
-The Codeconut Runtime Information format is used to measure the amount of code executed during execution of the application.
+The Coveron Runtime Information format is used to measure the amount of code executed during execution of the application.
 
 It contains a header with format and source file specific information as well as the markers itself.
 
-The Codeconut Runtime Information format allows the user to concatenate multiple executions in one file, adding up the marker counts.
+The Coveron Runtime Information format allows the user to concatenate multiple executions in one file, adding up the marker counts.
 
 
 ## Data representation
@@ -32,7 +32,7 @@ Line breaks are made with a single byte of the value 0x0A.
 The header for the CRI format contains the following information:
 
 - Magic number for CRI files (0x49 0x4D 0x41 0x43 0x52 0x49 0x46 0x21)
-  - The magic number can be interpreted in UTF-8 to get: IMACRIF! (*I'm a Codeconut Runtime Information File!*)
+  - The magic number can be interpreted in UTF-8 to get: IMACRIF! (*I'm a Coveron Runtime Information File!*)
 - Version of the CRI-File (2 bytes wide)
 - SHA-256 hash of the contents of the source code file (shall be equal to the hash stored in the respective CID file)
 - Instrumentation random (shall be equal to the random value stored in the respective CID file)
@@ -99,4 +99,4 @@ After each execution, a line break (0x0A) byte has to be set at EOF.
 
 ### Disable concatenated executions
 
-By defining CODECONUT_NO_CONCATENATED_EXECUTIONS in your source code or during compilation time, the Codeconut runtime helper won't try to append the new information into a existing coverage file, but instead force the creation of a new file (old information will be over-written).
+By defining COVERON_NO_CONCATENATED_EXECUTIONS in your source code or during compilation time, the Coveron runtime helper won't try to append the new information into a existing coverage file, but instead force the creation of a new file (old information will be over-written).

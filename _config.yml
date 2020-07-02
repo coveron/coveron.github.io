@@ -18,17 +18,17 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: Codeconut
+title: Coveron
 email: glenntoews@outlook.com
 description: >- # this means to ignore newlines until "baseurl:"
-  Codeconut is a open source and free code coverage tool
+  Coveron is a open source and free code coverage tool
   for C and C++ code. It provides statement, decision and MC/DC coverage
   and adheres to guidelines made by standards in the automotive and aviation sector. 
 baseurl: "" # the subpath of your site, e.g. /blog
-url: https://codeconut-project.github.io # the base hostname & protocol for your site
-git_address: https://github.com/codeconut-project
-git_edit_address: https://github.com/codeconut-project/codeconut-project.github.io/tree/master/docs
-github_username:  codeconut-project
+url: https://coveron.github.io # the base hostname & protocol for your site
+git_address: https://github.com/coveron
+git_edit_address: https://github.com/coveron/coveron.github.io/tree/master/docs
+github_username:  coveron
 lang: en-US
 
 markdown: kramdown
@@ -42,7 +42,7 @@ plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
 
-bootwatch: codeconut
+bootwatch: coveron
 
 timezone: Europe/Berlin
 defaults:

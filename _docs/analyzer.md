@@ -1,4 +1,4 @@
 ---
-title: Codeconut Analyzer - Details
+title: Coveron Analyzer - Details
 permalink: /docs/analyzer/
 ---

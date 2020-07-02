@@ -1,4 +1,4 @@
 ---
-title: Codeconut Instrumenter - Details
+title: Coveron Instrumenter - Details
 permalink: /docs/instrumenter/
 ---
