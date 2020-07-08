@@ -280,6 +280,234 @@
       <ownedAttribute xmi:type="uml:Property" xmi:id="_vMUb0Lw-EeqccNv3yHbdYQ" name="evaluation_markers" visibility="public">
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/EcorePrimitiveTypes.library.uml#EEList"/>
       </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Iqk4gMEZEeql2rwkQ-yKoQ" name="as_json" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Iqk4gcEZEeql2rwkQ-yKoQ" name="json_output" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_J5oFkMEZEeql2rwkQ-yKoQ" name="ConditionResult" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_SLdY4MEZEeql2rwkQ-yKoQ" name="evaluation_marker_id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_VBoUwMEZEeql2rwkQ-yKoQ" name="condition_result" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_YV_BcMEZEeql2rwkQ-yKoQ" name="as_json" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_YV_BccEZEeql2rwkQ-yKoQ" name="json_output" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_ZMfysMEZEeql2rwkQ-yKoQ" name="ConditionPossibility" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_gCNGQMEZEeql2rwkQ-yKoQ" name="decision_result" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_nKFu8MEZEeql2rwkQ-yKoQ" name="condition_combination" visibility="public" type="_J5oFkMEZEeql2rwkQ-yKoQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_oYkUQMEZEeql2rwkQ-yKoQ" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_t7GvwMEZEeql2rwkQ-yKoQ" name="as_json" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_t7GvwcEZEeql2rwkQ-yKoQ" name="json_output" visibility="public" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_vvbNEMEZEeql2rwkQ-yKoQ" name="ConditionData" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_zdDVYMEZEeql2rwkQ-yKoQ" name="evaluation_marker_id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_3AtCUMEZEeql2rwkQ-yKoQ" name="code_section" visibility="public" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_6RPmAMEZEeql2rwkQ-yKoQ" name="as_json" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6RPmAcEZEeql2rwkQ-yKoQ" name="json_output" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_y0g5QMEaEeql2rwkQ-yKoQ" name="CaseData" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_7LFtMMEbEeql2rwkQ-yKoQ" name="checkpoint_marker_id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_-85x8MEbEeql2rwkQ-yKoQ" name="case_type" visibility="public" type="_UYcxsLwzEeqccNv3yHbdYQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_B_upwMEcEeql2rwkQ-yKoQ" name="evaluation_code_section" visibility="public" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_E0vIAMEcEeql2rwkQ-yKoQ" name="body_code_section" visibility="public" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_H6W1IMEcEeql2rwkQ-yKoQ" name="as_json">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_H6W1IcEcEeql2rwkQ-yKoQ" name="json_output" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_IedAsMEcEeql2rwkQ-yKoQ" name="BranchResultData" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ZmxMgMEcEeql2rwkQ-yKoQ" name="evaluation_marker_id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_elz5YMEcEeql2rwkQ-yKoQ" name="condition_possibilities" visibility="public" type="_ZMfysMEZEeql2rwkQ-yKoQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_jcnQQMEcEeql2rwkQ-yKoQ" name="conditions" visibility="public" type="_vvbNEMEZEeql2rwkQ-yKoQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_m2R6wMEcEeql2rwkQ-yKoQ" name="result_evaluation_code_section" visibility="public" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qPsGkMEcEeql2rwkQ-yKoQ" name="result_body_code_section" visibility="public" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_tpGSYMEcEeql2rwkQ-yKoQ" name="as_json" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_tpGSYcEcEeql2rwkQ-yKoQ" name="json_output" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_woFMAMEcEeql2rwkQ-yKoQ" name="ClassData" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_0J_MgMEcEeql2rwkQ-yKoQ" name="class_id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_2DN_AMEcEeql2rwkQ-yKoQ" name="class_name" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_6yz6oMEcEeql2rwkQ-yKoQ" name="as_json" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_6yz6ocEcEeql2rwkQ-yKoQ" name="json_output" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_9G9HgMEcEeql2rwkQ-yKoQ" name="FunctionData" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_HCpUkMEdEeql2rwkQ-yKoQ" name="function_id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_LY9NgMEdEeql2rwkQ-yKoQ" name="function_name" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Oi4L0MEdEeql2rwkQ-yKoQ" name="function_type" visibility="public" type="_-E_9wLwyEeqccNv3yHbdYQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Q_h0cMEdEeql2rwkQ-yKoQ" name="parent_function_id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_T99UcMEdEeql2rwkQ-yKoQ" name="checkpoint_marker_id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_WqDHQMEdEeql2rwkQ-yKoQ" name="header_code_section" visibility="public" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ZUc4AMEdEeql2rwkQ-yKoQ" name="inner_code_section" visibility="public" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_enNyIMEdEeql2rwkQ-yKoQ" name="as_json" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_enNyIcEdEeql2rwkQ-yKoQ" name="json_output" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_hBli0MEdEeql2rwkQ-yKoQ" name="StatementData" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_laCJwMEdEeql2rwkQ-yKoQ" name="statement_id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_qD9iQMEdEeql2rwkQ-yKoQ" name="statement_type" visibility="public" type="_IMkDoLwzEeqccNv3yHbdYQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_sfNcsMEdEeql2rwkQ-yKoQ" name="function_id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_xZovUMEdEeql2rwkQ-yKoQ" name="checkpoint_marker_id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_0l2zsMEdEeql2rwkQ-yKoQ" name="code_section" visibility="public" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_93J_8MEdEeql2rwkQ-yKoQ" name="as_json" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_93J_8cEdEeql2rwkQ-yKoQ" name="json_output" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_BU-KoMEeEeql2rwkQ-yKoQ" name="IfBranchData" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_EfVN0MEeEeql2rwkQ-yKoQ" name="if_branch_id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_GMxnEMEeEeql2rwkQ-yKoQ" name="function_id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_KURA4MEeEeql2rwkQ-yKoQ" name="branch_results" visibility="public" type="_IedAsMEcEeql2rwkQ-yKoQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_K0G-kMEeEeql2rwkQ-yKoQ" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Os7qQMEeEeql2rwkQ-yKoQ" name="as_json">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Os7qQcEeEeql2rwkQ-yKoQ" name="json_output" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_S4baUMEeEeql2rwkQ-yKoQ" name="SwitchBranchData" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_XLZrYMEeEeql2rwkQ-yKoQ" name="switch_branch_id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ZiDZsMEeEeql2rwkQ-yKoQ" name="function_id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_c0KqsMEeEeql2rwkQ-yKoQ" name="switch_branch_code_section" visibility="public" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_gIzEMMEeEeql2rwkQ-yKoQ" name="cases" visibility="public" type="_y0g5QMEaEeql2rwkQ-yKoQ"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_l82tgMEeEeql2rwkQ-yKoQ" name="as_json" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_l82tgcEeEeql2rwkQ-yKoQ" name="json_output" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_msokoMEeEeql2rwkQ-yKoQ" name="TernaryExpressionData" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4rog0MEeEeql2rwkQ-yKoQ" name="ternary_expression_id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_6xxG4MEeEeql2rwkQ-yKoQ" name="function_id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_9KjjMMEeEeql2rwkQ-yKoQ" name="evaluation_marker_id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_BvkmgMEfEeql2rwkQ-yKoQ" name="evaluation_code_section" visibility="public" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_GZvPkMEfEeql2rwkQ-yKoQ" name="condition_possibilities" visibility="public" type="_ZMfysMEZEeql2rwkQ-yKoQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_G3UjcMEfEeql2rwkQ-yKoQ" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_K782gMEfEeql2rwkQ-yKoQ" name="conditions" visibility="public" type="_vvbNEMEZEeql2rwkQ-yKoQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_L60SgMEfEeql2rwkQ-yKoQ" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_RIyMMMEfEeql2rwkQ-yKoQ" name="true_code_section" visibility="public" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_SskTIMEfEeql2rwkQ-yKoQ" name="false_code_section" visibility="public" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_1nmvIMEeEeql2rwkQ-yKoQ" name="as_json" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_1nmvIcEeEeql2rwkQ-yKoQ" name="json_output" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_XBjWYMEfEeql2rwkQ-yKoQ" name="LoopData" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_lnnn4MEfEeql2rwkQ-yKoQ" name="loop_id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ouB_MMEfEeql2rwkQ-yKoQ" name="loop_type" visibility="public" type="_dVxSALwzEeqccNv3yHbdYQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_v2pAoMEfEeql2rwkQ-yKoQ" name="function_id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_ypHIQMEfEeql2rwkQ-yKoQ" name="evaluation_marker_id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_1om_QMEfEeql2rwkQ-yKoQ" name="evaluation_code_section" visibility="public" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_4qk7cMEfEeql2rwkQ-yKoQ" name="body_code_section" visibility="public" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_8nNJEMEfEeql2rwkQ-yKoQ" name="condition_possibilities" visibility="public" type="_ZMfysMEZEeql2rwkQ-yKoQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_9ZjzEMEfEeql2rwkQ-yKoQ" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_B4v7MMEgEeql2rwkQ-yKoQ" name="conditions" visibility="public" type="_vvbNEMEZEeql2rwkQ-yKoQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_CWIawMEgEeql2rwkQ-yKoQ" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_awdREMEfEeql2rwkQ-yKoQ" name="as_json" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_awdREcEfEeql2rwkQ-yKoQ" name="json_output" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_GLIWYMEgEeql2rwkQ-yKoQ" name="CodeData" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_NWIkgMEgEeql2rwkQ-yKoQ" name="classes" visibility="public" type="_woFMAMEcEeql2rwkQ-yKoQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Nx5TcMEgEeql2rwkQ-yKoQ" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Qg4CMMEgEeql2rwkQ-yKoQ" name="functions" visibility="public" type="_9G9HgMEcEeql2rwkQ-yKoQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_Q18TQMEgEeql2rwkQ-yKoQ" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_VMKFkMEgEeql2rwkQ-yKoQ" name="statements" visibility="public" type="_hBli0MEdEeql2rwkQ-yKoQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_VnNp4MEgEeql2rwkQ-yKoQ" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Y6L2gMEgEeql2rwkQ-yKoQ" name="if_branches" visibility="public" type="_BU-KoMEeEeql2rwkQ-yKoQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_ZOTFUMEgEeql2rwkQ-yKoQ" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_c1WrkMEgEeql2rwkQ-yKoQ" name="switch_branches" visibility="public" type="_S4baUMEeEeql2rwkQ-yKoQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_dSghoMEgEeql2rwkQ-yKoQ" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_hD69wMEgEeql2rwkQ-yKoQ" name="ternary_expressions" visibility="public" type="_msokoMEeEeql2rwkQ-yKoQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_hfSEEMEgEeql2rwkQ-yKoQ" value="*"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_koIrYMEgEeql2rwkQ-yKoQ" name="loops" visibility="public" type="_XBjWYMEfEeql2rwkQ-yKoQ">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_lFy3wMEgEeql2rwkQ-yKoQ" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_JtmXkMEgEeql2rwkQ-yKoQ" name="as_json" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_JtmXkcEgEeql2rwkQ-yKoQ" name="json_output" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_pTaHsMEgEeql2rwkQ-yKoQ" name="CIDData" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_wy1GoMEgEeql2rwkQ-yKoQ" name="source_code_path" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_zx6G4MEgEeql2rwkQ-yKoQ" name="source_code_hash" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_2-szAMEgEeql2rwkQ-yKoQ" name="source_code_base64" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_6Pkt4MEgEeql2rwkQ-yKoQ" name="instrumentation_random" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_802HAMEgEeql2rwkQ-yKoQ" name="checkpoint_markers_enabled" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_-8YbQMEgEeql2rwkQ-yKoQ" name="evaluation_markers_enabled" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_C_r4oMEhEeql2rwkQ-yKoQ" name="marker_data" visibility="public" type="_iQYw4Lw-EeqccNv3yHbdYQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_FtEr8MEhEeql2rwkQ-yKoQ" name="code_data" visibility="public" type="_GLIWYMEgEeql2rwkQ-yKoQ"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_uKa58MEgEeql2rwkQ-yKoQ" name="as_json" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_uKa58cEgEeql2rwkQ-yKoQ" name="json_output" direction="return"/>
+      </ownedOperation>
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="_Ok5-0FejEeq6X6574UvjaA" name="Coveron Runtime Helper" visibility="public">
