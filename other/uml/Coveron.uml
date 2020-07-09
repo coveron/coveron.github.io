@@ -35,10 +35,216 @@
       <elementImport xmi:type="uml:ElementImport" xmi:id="_8Lwp4Fk6EeqBqOWApGODhg"/>
       <elementImport xmi:type="uml:ElementImport" xmi:id="_LZUZMFk7EeqBqOWApGODhg"/>
       <elementImport xmi:type="uml:ElementImport" xmi:id="_Pp1MIFk7EeqBqOWApGODhg" importedElement="_y-FoQFesEeq6X6574UvjaA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="__EML0MHCEeqqR-gi9En_OA" name="config" visibility="public" type="_CKD3oFe3Eeq6X6574UvjaA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_CIXugMHDEeqqR-gi9En_OA" name="cid_manager" visibility="public" type="_y-FoQFesEeq6X6574UvjaA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_FIpooMHDEeqqR-gi9En_OA" name="clang_ast" visibility="public"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_MJq0UMHDEeqqR-gi9En_OA" name="__init__" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_MJq0UcHDEeqqR-gi9En_OA" name="config" type="_CKD3oFe3Eeq6X6574UvjaA"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_MJq0UsHDEeqqR-gi9En_OA" name="cid_manager" type="_y-FoQFesEeq6X6574UvjaA"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_MJq0U8HDEeqqR-gi9En_OA" name="clang_ast"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_RU7_UMHDEeqqR-gi9En_OA" name="_traverse_root" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_RU7_UcHDEeqqR-gi9En_OA" name="ast_pointer"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ZERpkMHDEeqqR-gi9En_OA" name="_traverse_function" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZERpkcHDEeqqR-gi9En_OA" name="ast_cursor"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZERpksHDEeqqR-gi9En_OA" name="args"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_n_4tQMHDEeqqR-gi9En_OA" name="_traverse_evaluation" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_n_4tQcHDEeqqR-gi9En_OA" name="ast_cursor"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_n_4tQsHDEeqqR-gi9En_OA" name="args"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_n_4tQ8HDEeqqR-gi9En_OA" name="return_data"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_gDsSwMHDEeqqR-gi9En_OA" name="_traverse_compound_statement" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gDsSwcHDEeqqR-gi9En_OA" name="ast_cursor"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gDsSwsHDEeqqR-gi9En_OA" name="args"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_gDsSw8HDEeqqR-gi9En_OA" name="return_data"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_yDjxoMHDEeqqR-gi9En_OA" name="_traverse_if_statement" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_yDjxocHDEeqqR-gi9En_OA" name="ast_cursor"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_yDjxosHDEeqqR-gi9En_OA" name="args"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_yDjxo8HDEeqqR-gi9En_OA" name="return_data"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_4nR9UMHDEeqqR-gi9En_OA" name="_traverse_if_branch_result" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_4nR9UcHDEeqqR-gi9En_OA" name="ast_cursor"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_4nR9UsHDEeqqR-gi9En_OA" name="args"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_4nR9U8HDEeqqR-gi9En_OA" name="return_data"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_9mQYwMHDEeqqR-gi9En_OA" name="_traverse_switch_statement" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_9mQYwcHDEeqqR-gi9En_OA" name="ast_cursor"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_9mQYwsHDEeqqR-gi9En_OA" name="args"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_9mQYw8HDEeqqR-gi9En_OA" name="return_data"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F6s7MMHEEeqqR-gi9En_OA" name="_traverse_switch_compound_statement" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F6s7McHEEeqqR-gi9En_OA" name="ast_cursor"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F6s7MsHEEeqqR-gi9En_OA" name="args"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_F6s7M8HEEeqqR-gi9En_OA" name="return_data"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_MWYlMMHEEeqqR-gi9En_OA" name="_search_for_ternary" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_MWYlMcHEEeqqR-gi9En_OA" name="ast_cursor"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_MWYlMsHEEeqqR-gi9En_OA" name="args"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_MWYlM8HEEeqqR-gi9En_OA" name="return_data"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_UiCYAMHEEeqqR-gi9En_OA" name="_traverse_ternary_statement" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_UiCYAcHEEeqqR-gi9En_OA" name="ast_cursor"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_UiCYAsHEEeqqR-gi9En_OA" name="args"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_UiCYA8HEEeqqR-gi9En_OA" name="return_data"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ZK8c0MHEEeqqR-gi9En_OA" name="_traverse_for_loop" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZK8c0cHEEeqqR-gi9En_OA" name="ast_cursor"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZK8c0sHEEeqqR-gi9En_OA" name="args"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_ZK8c08HEEeqqR-gi9En_OA" name="return_data"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_d_ctoMHEEeqqR-gi9En_OA" name="_traverse_while_loop" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_d_ctocHEEeqqR-gi9En_OA" name="clang_ast"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_d_ctosHEEeqqR-gi9En_OA" name="args"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_d_cto8HEEeqqR-gi9En_OA" name="return_data"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_iXmZoMHEEeqqR-gi9En_OA" name="_traverse_do_while_loop" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_iXmZocHEEeqqR-gi9En_OA" name="clang_ast"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_iXmZosHEEeqqR-gi9En_OA" name="args"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_iXmZo8HEEeqqR-gi9En_OA" name="return_data"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_l8hR4MHEEeqqR-gi9En_OA" name="start_parser" visibility="public"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_y-FoQFesEeq6X6574UvjaA" name="CIDManager" visibility="public">
       <elementImport xmi:type="uml:ElementImport" xmi:id="_60EdQFiBEeqY3o3QLZdP8w" importedElement="_KGaaQFejEeq6X6574UvjaA"/>
       <elementImport xmi:type="uml:ElementImport" xmi:id="_bpa1gFk5EeqBqOWApGODhg" importedElement="_CKD3oFe3Eeq6X6574UvjaA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_P9nS8MG2EeqdgK8wL-IBAA" name="config" visibility="public" type="_CKD3oFe3Eeq6X6574UvjaA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_T7nZkMG2EeqdgK8wL-IBAA" name="_cid_data" visibility="private" type="_pTaHsMEgEeql2rwkQ-yKoQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_lTE0oMG2EeqdgK8wL-IBAA" name="source_file" visibility="public" type="_pdrfALwzEeqccNv3yHbdYQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_oLelIMG2EeqdgK8wL-IBAA" name="_current_id" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_2H4OkMG2EeqdgK8wL-IBAA" name="__init__" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2H4OkcG2EeqdgK8wL-IBAA" name="config" type="_CKD3oFe3Eeq6X6574UvjaA"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2H4OksG2EeqdgK8wL-IBAA" name="source_file" type="_pdrfALwzEeqccNv3yHbdYQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_2H4Ok8G2EeqdgK8wL-IBAA" name="source_code" type="_a-0MQLw0EeqccNv3yHbdYQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_7iXhUMG2EeqdgK8wL-IBAA" name="get_new_id" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_7iXhUcG2EeqdgK8wL-IBAA" name="id" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_GzOxkMG3EeqdgK8wL-IBAA" name="get_instrumentation_random" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_GzOxkcG3EeqdgK8wL-IBAA" name="instrumentation_random" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_LWm2IMG3EeqdgK8wL-IBAA" name="get_source_code_hash" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_LWm2IcG3EeqdgK8wL-IBAA" name="source_code_hash" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_WBj88MG3EeqdgK8wL-IBAA" name="get_checkpoint_markers" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_WBj88cG3EeqdgK8wL-IBAA" name="checkpoint_markers" type="_y3AaULw9EeqccNv3yHbdYQ" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_hQEcwMG3EeqdgK8wL-IBAA" name="get_evaluation_markers" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_hQEcwcG3EeqdgK8wL-IBAA" name="evaluation_markers" type="_8UlvELw9EeqccNv3yHbdYQ" direction="return"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_t5NukMG3EeqdgK8wL-IBAA" name="add_checkpoint_marker" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_t5NukcG3EeqdgK8wL-IBAA" name="checkpoint_marker_id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_t5NuksG3EeqdgK8wL-IBAA" name="code_position" type="_nwtxcLw0EeqccNv3yHbdYQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_4kflgMG3EeqdgK8wL-IBAA" name="add_evaluation_marker" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_4kflgcG3EeqdgK8wL-IBAA" name="evaluation_marker_id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_4kflgsG3EeqdgK8wL-IBAA" name="code_section" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_4kflg8G3EeqdgK8wL-IBAA" name="evaluation_type" type="_wdXDYLwyEeqccNv3yHbdYQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_FpMx8MG4EeqdgK8wL-IBAA" name="add_class_data" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_FpMx8cG4EeqdgK8wL-IBAA" name="class_id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_FpMx8sG4EeqdgK8wL-IBAA" name="class_name">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_pQJcQMG4EeqdgK8wL-IBAA" name="add_function_data" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_pQJcQcG4EeqdgK8wL-IBAA" name="function_id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_pQJcQsG4EeqdgK8wL-IBAA" name="function_name">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_pQJcQ8G4EeqdgK8wL-IBAA" name="function_type" type="_-E_9wLwyEeqccNv3yHbdYQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_pQJcRMG4EeqdgK8wL-IBAA" name="parent_function_id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_pQJcRcG4EeqdgK8wL-IBAA" name="checkpoint_marker_id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_pQJcRsG4EeqdgK8wL-IBAA" name="header_code_section" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_pQJcR8G4EeqdgK8wL-IBAA" name="inner_code_section" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_3BXwcMG4EeqdgK8wL-IBAA" name="add_statement_data" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_3BXwccG4EeqdgK8wL-IBAA" name="statement_id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_3BXwcsG4EeqdgK8wL-IBAA" name="statement_type" type="_IMkDoLwzEeqccNv3yHbdYQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_3BXwc8G4EeqdgK8wL-IBAA" name="function_id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_3BXwdMG4EeqdgK8wL-IBAA" name="checkpoint_marker_id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_3BXwdcG4EeqdgK8wL-IBAA" name="code_section" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_DQvQUMG5EeqdgK8wL-IBAA" name="add_if_branch_data" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_DQvQUcG5EeqdgK8wL-IBAA" name="if_branch_id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_DQvQUsG5EeqdgK8wL-IBAA" name="function_id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_DQvQU8G5EeqdgK8wL-IBAA" name="branch_results" type="_IedAsMEcEeql2rwkQ-yKoQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_OdfDUMG-EeqqR-gi9En_OA" name="add_switch_branch_data" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_OdfDUcG-EeqqR-gi9En_OA" name="switch_branch_id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_OdfDUsG-EeqqR-gi9En_OA" name="function_id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_OdfDU8G-EeqqR-gi9En_OA" name="switch_branch_code_section" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_OdfDVMG-EeqqR-gi9En_OA" name="cases" type="_y0g5QMEaEeql2rwkQ-yKoQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_queMsMG-EeqqR-gi9En_OA" name="add_ternary_expression_data" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_queMscG-EeqqR-gi9En_OA" name="ternary_expression_id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_queMssG-EeqqR-gi9En_OA" name="function_id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_queMs8G-EeqqR-gi9En_OA" name="evaluation_marker_id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_queMtMG-EeqqR-gi9En_OA" name="evaluation_code_section" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_queMtcG-EeqqR-gi9En_OA" name="condition_possibilities" type="_ZMfysMEZEeql2rwkQ-yKoQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_queMtsG-EeqqR-gi9En_OA" name="conditions" type="_vvbNEMEZEeql2rwkQ-yKoQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_queMt8G-EeqqR-gi9En_OA" name="true_code_section" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_queMuMG-EeqqR-gi9En_OA" name="false_code_section" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="__-VcsMG-EeqqR-gi9En_OA" name="add_loop_data" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="__-VcscG-EeqqR-gi9En_OA" name="loop_id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="__-VcssG-EeqqR-gi9En_OA" name="loop_type" type="_dVxSALwzEeqccNv3yHbdYQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="__-Vcs8G-EeqqR-gi9En_OA" name="function_id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="__-VctMG-EeqqR-gi9En_OA" name="evaluation_marker_id">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="__-VctcG-EeqqR-gi9En_OA" name="evaluation_code_section" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="__-VctsG-EeqqR-gi9En_OA" name="body_code_section" type="_6YhkoLw1EeqccNv3yHbdYQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="__-Vct8G-EeqqR-gi9En_OA" name="condition_possibilities" type="_ZMfysMEZEeql2rwkQ-yKoQ"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="__-VcuMG-EeqqR-gi9En_OA" name="conditions" type="_vvbNEMEZEeql2rwkQ-yKoQ"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Db5vwMG_EeqqR-gi9En_OA" name="write_cid_file" visibility="public"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_93eMoFesEeq6X6574UvjaA" name="__main__" visibility="public">
       <elementImport xmi:type="uml:ElementImport" xmi:id="_Bj2a0Fk5EeqBqOWApGODhg" importedElement="_aNQ5UFe0Eeq6X6574UvjaA"/>
@@ -48,9 +254,20 @@
       <elementImport xmi:type="uml:ElementImport" xmi:id="_Fj6YoLwuEeqccNv3yHbdYQ" importedElement="_AtWSULwuEeqccNv3yHbdYQ"/>
       <ownedAttribute xmi:type="uml:Property" xmi:id="_K5nEw1lDEeqBqOWApGODhg" name="instrumenter" type="_GdjigFh6EeqY3o3QLZdP8w"/>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_2XKOIFeyEeq6X6574UvjaA" name="main"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Y5QNsMG1EeqdgK8wL-IBAA" name="print_title"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_aNQ5UFe0Eeq6X6574UvjaA" name="ArgumentHandler" visibility="public">
       <elementImport xmi:type="uml:ElementImport" xmi:id="_ZroTIFk5EeqBqOWApGODhg" importedElement="_CKD3oFe3Eeq6X6574UvjaA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_g79f4MG1EeqdgK8wL-IBAA" name="_config" visibility="private" type="_CKD3oFe3Eeq6X6574UvjaA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_lv7lMMG1EeqdgK8wL-IBAA" name="_argparser" visibility="private"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_rJK6wMG1EeqdgK8wL-IBAA" name="_args" visibility="private"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_1siy4MG1EeqdgK8wL-IBAA" name="_other_args" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_82q3QMG1EeqdgK8wL-IBAA" name="__init__" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_82q3QcG1EeqdgK8wL-IBAA" name="config" type="_CKD3oFe3Eeq6X6574UvjaA"/>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_ChiIUMG2EeqdgK8wL-IBAA" name="_argparse_config" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_F9X9EMG2EeqdgK8wL-IBAA" name="_parse_args" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_IRf70MG2EeqdgK8wL-IBAA" name="_parse_other_args" visibility="private"/>
     </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_CKD3oFe3Eeq6X6574UvjaA" name="Configuration" visibility="public">
       <ownedAttribute xmi:type="uml:Property" xmi:id="_S4socLwuEeqccNv3yHbdYQ" name="verbose" visibility="public">
@@ -117,6 +334,9 @@
         </ownedComment>
         <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
       </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_T54wsMG1EeqdgK8wL-IBAA" name="_compiler_args" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
       <ownedOperation xmi:type="uml:Operation" xmi:id="_EdjioLwwEeqccNv3yHbdYQ" name="_get_compiler_args" visibility="private">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_EdjiobwwEeqccNv3yHbdYQ" name="self" direction="return">
           <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
@@ -131,8 +351,46 @@
     <packagedElement xmi:type="uml:Class" xmi:id="_GdjigFh6EeqY3o3QLZdP8w" name="Instrumenter" visibility="public">
       <elementImport xmi:type="uml:ElementImport" xmi:id="_VYXRsFk6EeqBqOWApGODhg" importedElement="_CKD3oFe3Eeq6X6574UvjaA"/>
       <elementImport xmi:type="uml:ElementImport" xmi:id="_IlOHoFlAEeqBqOWApGODhg" importedElement="_y-FoQFesEeq6X6574UvjaA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_NojxAMG_EeqqR-gi9En_OA" name="config" visibility="public" type="_CKD3oFe3Eeq6X6574UvjaA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_QGZFYMG_EeqqR-gi9En_OA" name="cid_manager" visibility="public" type="_y-FoQFesEeq6X6574UvjaA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_TeY78MG_EeqqR-gi9En_OA" name="source_file" visibility="public" type="_pdrfALwzEeqccNv3yHbdYQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_Wdo7UMG_EeqqR-gi9En_OA" name="source_code" visibility="public" type="_a-0MQLw0EeqccNv3yHbdYQ"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_aNkJsMG_EeqqR-gi9En_OA" name="_instrumented_code" visibility="private">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_kh4SIMG_EeqqR-gi9En_OA" name="_instrumenter_marker_list" visibility="private" type="_6b-K4MG_EeqqR-gi9En_OA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_YPbzoMHAEeqqR-gi9En_OA" value="*"/>
+      </ownedAttribute>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_5Nxc8MHAEeqqR-gi9En_OA" name="_prepare_markers" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_Ca-zYMHBEeqqR-gi9En_OA" name="_insert_text" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ca-zYcHBEeqqR-gi9En_OA" name="insert_text">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ca-zYsHBEeqqR-gi9En_OA" name="line">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_Ca-zY8HBEeqqR-gi9En_OA" name="column">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_GZkv4MHBEeqqR-gi9En_OA" name="_get_file_struct_name" visibility="private">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_GZkv4cHBEeqqR-gi9En_OA" name="file_struct_name" direction="return">
+          <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+        </ownedParameter>
+      </ownedOperation>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_MJe5AMHBEeqqR-gi9En_OA" name="_write_markers" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_PTD5EMHBEeqqR-gi9En_OA" name="_write_wrapper" visibility="private"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_TQy58MHBEeqqR-gi9En_OA" name="start_instrumentation" visibility="public"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_VKrMsMHBEeqqR-gi9En_OA" name="write_output_file" visibility="public"/>
     </packagedElement>
-    <packagedElement xmi:type="uml:Class" xmi:id="_AtWSULwuEeqccNv3yHbdYQ" name="ClangBridge" visibility="public"/>
+    <packagedElement xmi:type="uml:Class" xmi:id="_AtWSULwuEeqccNv3yHbdYQ" name="ClangBridge" visibility="public">
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_nut6MMHCEeqqR-gi9En_OA" name="__init__" visibility="public"/>
+      <ownedOperation xmi:type="uml:Operation" xmi:id="_rcw5QMHCEeqqR-gi9En_OA" name="clang_parse" visibility="public">
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_rcw5QcHCEeqqR-gi9En_OA" name="file"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_rcw5QsHCEeqqR-gi9En_OA" name="parse_args"/>
+        <ownedParameter xmi:type="uml:Parameter" xmi:id="_xpuKwMHCEeqqR-gi9En_OA" name="cursor" direction="return"/>
+      </ownedOperation>
+    </packagedElement>
     <packagedElement xmi:type="uml:Class" xmi:id="_n7m6MLwxEeqccNv3yHbdYQ" name="CustomJSONEncoder" visibility="public">
       <ownedOperation xmi:type="uml:Operation" xmi:id="_qk6ewLwxEeqccNv3yHbdYQ" name="default">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_wJzqsLwxEeqccNv3yHbdYQ" name="obj"/>
@@ -508,6 +766,27 @@
       <ownedOperation xmi:type="uml:Operation" xmi:id="_uKa58MEgEeql2rwkQ-yKoQ" name="as_json" visibility="public">
         <ownedParameter xmi:type="uml:Parameter" xmi:id="_uKa58cEgEeql2rwkQ-yKoQ" name="json_output" direction="return"/>
       </ownedOperation>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Enumeration" xmi:id="_o-9hcMG_EeqqR-gi9En_OA" name="InstrumenterMarkerType">
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_sH8roMG_EeqqR-gi9En_OA" name="CHECKPOINT"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_tFn00MG_EeqqR-gi9En_OA" name="EVALUATION_START"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_uJhh0MG_EeqqR-gi9En_OA" name="EVALUATION_END"/>
+      <ownedLiteral xmi:type="uml:EnumerationLiteral" xmi:id="_v6tyoMG_EeqqR-gi9En_OA" name="EnumerationLiteral4"/>
+    </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_6b-K4MG_EeqqR-gi9En_OA" name="InstrumenterMarker" visibility="public">
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_-mDlsMG_EeqqR-gi9En_OA" name="code_line" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_BqK28MHAEeqqR-gi9En_OA" name="code_column" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_IOjxAMHAEeqqR-gi9En_OA" name="marker_type" visibility="public" type="_o-9hcMG_EeqqR-gi9En_OA"/>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_MhovwMHAEeqqR-gi9En_OA" name="marker_id" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Integer"/>
+      </ownedAttribute>
+      <ownedAttribute xmi:type="uml:Property" xmi:id="_S8bo8MHAEeqqR-gi9En_OA" name="condition" visibility="public">
+        <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#Boolean"/>
+      </ownedAttribute>
     </packagedElement>
   </packagedElement>
   <packagedElement xmi:type="uml:Component" xmi:id="_Ok5-0FejEeq6X6574UvjaA" name="Coveron Runtime Helper" visibility="public">
