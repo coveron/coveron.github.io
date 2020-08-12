@@ -57,7 +57,7 @@ The checkpoint marker does not contain any additional information.
 
 The evaluation marker contains information, if the statement got evaluated to true or false.
 
-- If the result was "true", the byte value is anything but 0x00.
+- If the result was "true", the byte value is 0x01.
 - If the result was "false", the byte value is 0x00.
 
 
