@@ -49,25 +49,16 @@ A marker consists of 5 bytes:
 - The fifth byte contains additional information that depends on the type of the marker
 
 
-### Statement marker
+### Checkpoint marker
 
-The statement marker does not contain any additional information.
+The checkpoint marker does not contain any additional information.
 
+### Evaluation marker
 
-### Decision marker
+The evaluation marker contains information, if the statement got evaluated to true or false.
 
-The decision marker contains information, if the decision got evaluated to true or false.
-
-- If the result was "true", the byte value is 0b10100110/0xA6.
-- If the result was "false", the byte value is 0b01011001/0x59.
-
-
-### Statement marker
-
-The statement marker contains information, if the statement got evaluated to true or false.
-
-- If the result was "true", the byte value is 0b10100110/0xA6.
-- If the result was "false", the byte value is 0b01011001/0x59.
+- If the result was "true", the byte value is anything but 0x00.
+- If the result was "false", the byte value is 0x00.
 
 
 ## Concatenated executions
